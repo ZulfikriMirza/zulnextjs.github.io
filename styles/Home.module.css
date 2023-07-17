@@ -1,51 +1,375 @@
-
-.profile{
+.container {
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.profile__detail {
+.profile__content{
   position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
 }
-
-.profile__background {
-  /* position: relative; */
-  z-index: -1;
-  width: 98vw;
-  height: 100vh;
-  background: url("../assets/citynight.png");
-  background-position: center;
-  background-repeat:  no-repeat;
-  background-size: cover;
-  opacity: 0.85;
-
-}
-
 .profile__title {
-  font-family: "Times New Roman", Times, serif;
-
-  z-index: 1;
+  font-family: var(--font-inter);
   position: absolute;
-  top: 300px;
-  left: 40%;
-  font-weight: 500;
   font-size: 32px;
-  display: inline-block;
-  background: linear-gradient(to bottom, #9e9e9e 70%, #040018 30%);
+  font-weight: 500;
+
+  top: 260px;
+  left: 37%;
+  z-index: 1;
+  background: linear-gradient(to bottom, #9e9e9e 59%, #040018 41%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.profile__content p {
+  font-family: var(--font-inter);
+  position: absolute;
+  font-size: 12px;
+  font-weight: 800;
+  top: 340px;
+  left: 38.3%;
+  z-index: 1;
+  color: #9e9e9e;
+}
+
+
+.aboutme__content{
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+
+  position: relative;
+  z-index: 5;
+  gap: 40px;
+}
+
+.aboutme__description_experience {
+  width: 650px;
+  padding-left: 80px;
+}
+
+.aboutme__description_experience h3 {
+  font-weight: 500;
+  font-size: 48px;
+  padding-bottom: 20px;
+}
+
+.aboutme__description_experience ul {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.aboutme__description_experiences li {
+  padding-bottom: 10px;
+}
+
+.aboutme__description_skills ul {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.aboutme__description_skills h3 {
+  font-weight: 500;
+  font-size: 48px;
+  padding-bottom: 20px;
+}
+
+.aboutme__description_skills li {
+  padding-bottom: 10px;
+}
+
+.aboutme__container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.aboutme__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.aboutme__contact_content {
+  position: absolute;
+  top: 60%;
+  right: 63%;
+}
+
+.aboutme__contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style-type: none;
+}
+.aboutme__contact .instagram img {
+  width: 50px;
+  height: 50px;
+}
+
+.aboutme__contact_media {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.aboutme__contact .linkedln img {
+  width: 50px;
+  height: 50px;
+}
+
+.last_project__title {
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 78px;
+  color: #fff;
+  text-align: center;
+}
+
+.last_project__catalogue {
+  margin-top: 44px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 56px;
+}
+
+.last_project__card {
+  padding: 30px;
+  min-width: 260px;
+  height: fit-content;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  border-radius: 36px;
+  background: rgba(255, 253, 253);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.last_project__button {
+  width: fit-content;
+
+  padding: 20px 20px;
+  margin: 50px auto 0;
+
+  font-weight: 0;
+  font-size: 18px;
+  line-height: 23px;
+
+  font-family: "Plus Jakarta Sans" sans-serif;
+  color: #121212;
+
+  border: none;
+  outline: none;
+  background: #fff;
+  border-radius: 64px;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+
+.last_project__button p {
+  margin: 10px 10px 0 0;
+}
+
+.last_project__button img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+
+
+}
+
+.ps { 
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+
+}
 
 @media screen and (max-width: 1024px) {
-  .profile__title {
-      font-size: 24px;
+  .aboutme {
+      padding-top: 40px;
   }
+  .aboutme__contact_content {
+    top: 60%;
+    right: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile__title{
+    font-size: 20px;
+  }
+  .profile__content p{
+    top: 310px;
+    left: 38%;
+    font-size: 8px;
+  }
+  .aboutme__description_experience {
+      width: 450px;
+      padding-left: 80px;
+      
+  }
+  
+  .aboutme__description_experience h3 {
+      font-weight: 500;
+      font-size: 36px;
+      padding-bottom: 20px;
+  }
+  
+  .aboutme__description_experience ul {
+      font-weight: 300;
+      font-size: 14px;
+  }
+  
+  .aboutme__description_experience li {
+      padding-bottom: 10px;
+  }
+  
+  .aboutme__description_skills ul {
+      font-weight: 300;
+      font-size: 14px;
+  }
+  
+  .aboutme__description_skills h3 {
+      font-weight: 500;
+      font-size: 36px;
+      padding-bottom: 20px;
+  }
+
+  .aboutme__content {
+      gap: 20px;
+  }
+  .last_project {
+    margin-top: 60px;
+}
+.last_project__title {
+    font-size: 48px;
+}
+.last_project__card {
+    padding: 38px;
+    min-width: 200px;
+    height: fit-content;
+}
+
+.aboutme__content{
+  position: relative;
+}
+
+.aboutme__description_experience{
+  width: 400px;
+  padding-left: 30px;
+
+}
+
+.aboutme__description_experience h3 {
+  font-weight: 500;
+  font-size: 36px;
+  padding-left: 40px;
+}
+
+.aboutme__description_experience li {
+  padding-bottom: 8px;
+}
+
+.aboutme__contact {
+  left: 1%;
+}
+
+.aboutme__description_skills h3 {
+  padding-left: 40px;
+}
+.aboutme__contact_content {
+  top: 60%;
+  right: 35%;
+}
+
+.aboutme__contact h3 {
+  padding-left: 40px;
+}
+
+.last_project__button img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+
+
+}
 }
 
 @media screen and (max-width: 480px) {
-  .profile__title {
-      left: 23%;
+  .aboutme{
+      display: flex;
+      flex-direction: column;
+  }
+
+  .aboutme__content {
+      display: flex;
+      flex-direction: column;
+      right: 10%;
+      height: 100vh;
+
+      position: absolute ;
+      z-index: 999;
+      
+  }
+
+  .aboutme__description_experience {
+      width: 400px;
+      
+  }
+
+  .aboutme__container { 
+      padding-left: 70px;
+      gap: 0px;
+  }
+
+  .aboutme__description_experience h3 {
+      font-weight: 500;
+      font-size: 36px;
+      padding-bottom: 20px;
+  }
+  
+  .aboutme__description_experience ul {
+      font-weight: 300;
+      font-size: 14px;
+  }
+  
+  .aboutme__description_experience li {
+      padding-bottom: 10px;
+  }
+  
+  .aboutme__description_skills ul {
+      font-weight: 300;
+      font-size: 14px;
+      padding-left: 0px;
+  }
+
+  .aboutme__description_skills h3 {
+      font-weight: 500;
+      font-size: 36px;
+      padding-left: 0px;
+      margin-bottom: 0px;
+  }
+
+  .last_project {
+    padding-top: 200px;
   }
 }
-
